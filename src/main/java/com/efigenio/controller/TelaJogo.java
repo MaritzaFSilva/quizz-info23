@@ -5,26 +5,27 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class TelaPrincipal {
+
+public class TelaJogo {
 
     @FXML
-    private Button btnAlternativa1;
+    private Button alternativa1;
 
     @FXML
-    private Button btnAlternativa2;
+    private Button alternativa2;
 
     @FXML
-    private Button btnAlternativa3;
+    private Button alternativa3;
 
     @FXML
-    private Button btnAlternativa4;
+    private Button alternativa4;
 
     @FXML
-    private Label txtEnunciado;
+    private Label enunciado;
 
     @FXML
     void respondeQuestao(ActionEvent event) {
-
+        System.out.println("Cliquei aqui");
     }
 
 }

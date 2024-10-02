@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.efigenio.controller.GameController;
-import com.efigenio.controller.TelaPrincipal;
+import com.efigenio.controller.TelaJogo;
 import com.efigenio.model.Questao;
 
 import javafx.application.Application;
@@ -35,20 +35,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-                // inicializaComponentes();
-        // atualizaComponente();
-        // LINHA 27 -> private static Scene cena;
-                try {
-                        Parent parent = loadFXML("layout");
-            
-            
-            cena = new Scene(parent, 640, 480);
+
+        try {
+            cena = new Scene(loadFXML("layout"), 640, 480);
         } catch (IOException e) {
             System.out.println("deu ruim ");
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-                stage.setScene(cena);
+        stage.setScene(cena);
         stage.setTitle("Quiz Game");
         stage.show();
     }
@@ -125,8 +119,8 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-                System.out.println(fxmlLoader);
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+
         return fxmlLoader.load();
 
     }
